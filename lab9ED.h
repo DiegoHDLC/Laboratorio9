@@ -5,12 +5,11 @@ typedef struct _tablaHash{
   struct _tablaHash *siguiente;
 }THASH[27];
 
-
 void creatablahash(char *nombre, int tamano){
   tabla = creaTabla();
+  int contador = 0;
   FILE *p;
   char c, palabra[20];
-  int contador = 0;
   palabra = creaArreglo(palabra);
   p = fopen(nombre, "r");
   while((c = fgetc(p)) != EOF){
